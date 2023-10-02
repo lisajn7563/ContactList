@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C__ContactList.Interfaces;
 
-public interface IMenuService
+public interface IMenuService // vad som kommer listas upp i menyn
 {
     public void MainMenu();
     public void CreateContact();

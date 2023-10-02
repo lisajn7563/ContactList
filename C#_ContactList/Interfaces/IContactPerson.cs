@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace C__ContactList.Interfaces;
 
-public interface IContactPerson
+public interface IContactPerson // vad man vill veta av kontakten
 {
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
