@@ -1,0 +1,17 @@
+C:\skola\ContactList\C#_ContactList\bin\Debug\net7.0\C#_ContactList.exe
+C:\skola\ContactList\C#_ContactList\bin\Debug\net7.0\C#_ContactList.deps.json
+C:\skola\ContactList\C#_ContactList\bin\Debug\net7.0\C#_ContactList.runtimeconfig.json
+C:\skola\ContactList\C#_ContactList\bin\Debug\net7.0\C#_ContactList.dll
+C:\skola\ContactList\C#_ContactList\bin\Debug\net7.0\C#_ContactList.pdb
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.GeneratedMSBuildEditorConfig.editorconfig
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.AssemblyInfoInputs.cache
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.AssemblyInfo.cs
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.csproj.CoreCompileInputs.cache
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.dll
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\refint\C#_ContactList.dll
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.pdb
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.genruntimeconfig.cache
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\ref\C#_ContactList.dll
+C:\skola\ContactList\C#_ContactList\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.csproj.AssemblyReference.cache
+C:\skola\ContactList\C#_ContactList\obj\Debug\net7.0\C#_ContactList.csproj.CopyComplete
