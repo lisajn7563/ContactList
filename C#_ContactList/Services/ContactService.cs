@@ -8,12 +8,18 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace C__ContactList.Services
+namespace C__ContactList.Services // funkar inte att spara filen utan den skrivs över, 
 {
     public class ContactService : IContactService 
     {
         private List<ContactPerson> _contactList = new List<ContactPerson>(); // privat lista som bara kan nås från andra i samma class,( en lista som skapar/lagra ContactPerson- objekt)
         private List<IContactPerson> iContactList = new List<IContactPerson>();// ej tillgänligt utanför klassen 
+        public ContactService()
+        {
+            _contactList = GetFile();
+
+        }
+
         public ContactPerson AddContact(ContactPerson contact) // (metod) service till att lägga till kontakt
         {
             _contactList.Add(contact); // metod som lägger till en kontakt

@@ -1,24 +1,22 @@
-﻿namespace MauiContactList
+﻿using C__ContactList.Models;
+using System.Collections.ObjectModel;
+
+namespace MauiContactList
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        ObservableCollection<ContactPerson> contactPerson = new ObservableCollection<ContactPerson>()
+        {
+            new ContactPerson{ FirstName = "test"},
+            new ContactPerson { LastName = "test"}
+        };
+       
 
         public MainPage()
         {
             InitializeComponent();
+            ContactList.ItemsSource = contactPerson;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
     }
 }
