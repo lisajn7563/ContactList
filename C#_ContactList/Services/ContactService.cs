@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace C__ContactList.Services // funkar inte att spara filen utan den skrivs över, 
+namespace C__ContactList.Services 
 {
     public class ContactService : IContactService 
     {

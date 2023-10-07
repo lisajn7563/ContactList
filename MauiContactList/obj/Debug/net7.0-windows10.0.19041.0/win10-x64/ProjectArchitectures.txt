@@ -1,1 +1,0 @@
-C:\skola\ContactList\MauiContactList\MauiContactList.csproj;x64

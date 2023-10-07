@@ -10,10 +10,17 @@ namespace C__ContactList.Services;
 
 public class MenuService : IMenuService
 {
-    private readonly ContactService _contactService = new ContactService();
+    private readonly ContactService _contactService = new ContactService(); // skapar en ny instant av ContactService klassen som läggs i _contactService
+    /*Objekt (instanser): Ett objekt är en konkret 
+    förekomst av en klass. Det är en individuell
+    enhet som har sina egna unika egenskaper
+    (medlemsvariabler) och kan utföra handlingar 
+    (metoder) enligt beskrivningen som ges av klassen */
     public void CreateContact()
     {
         var contact = new ContactPerson();
+
+        // skapar en ny instans av ContactPerson
 
         Console.Clear();
         Console.WriteLine("LÄGG TILL EN KONTAKT");
@@ -30,7 +37,7 @@ public class MenuService : IMenuService
 
         var contactAddress = new Address();
 
-        //skapa ny instans av adress klassen
+        //skapa ny instans av address klassen
 
 
         Console.WriteLine("Gatuadress: ");
@@ -53,7 +60,7 @@ public class MenuService : IMenuService
         Console.ReadKey();
         MainMenu();
 
-    }
+    } // skapar en kontakt
 
     public void EditContact()
     {
@@ -64,10 +71,10 @@ public class MenuService : IMenuService
         var email = Console.ReadLine()!.Trim().ToLower();
         try
         {
-            var contact = _contactService.GetContactPerson(email!);
+            var contact = _contactService.GetContactPerson(email!); // hämtar kontakten via mail
+            
 
-
-            if (contact != null)
+            if (contact != null) // om kontakten inte är null skrivs de nedan ut
             {
 
                 Console.WriteLine("KONTAKTEN SOM HITTADES");
@@ -82,7 +89,15 @@ public class MenuService : IMenuService
                 var response = Console.ReadLine();
                 Console.Clear();
 
-                if (response?.Trim().Equals("Ja", StringComparison.OrdinalIgnoreCase) == true)
+                /* om response = ja är de true, 
+                 annars retunera false (då kommer inga ändriga göras)
+                 .Equals("Ja", StringComparison.OrdinalIgnoreCase)
+                 jämför den trimmade textsträngen response med texten "Ja"
+                 oavsett versaler eller gemener (stor- eller småbokstäver).
+                 StringComparison.OrdinalIgnoreCase är en inställning
+                 som ignorerar bokstavsstorleken vid jämförelse.*/
+
+                if (response?.Trim().Equals("Ja", StringComparison.OrdinalIgnoreCase) == true) 
                 {
                     Console.Write("Nytt förnamn: ");
                     var newFirstName = Console.ReadLine();
@@ -102,7 +117,7 @@ public class MenuService : IMenuService
 
                    
                     
-                    Address newAddress = new Address();
+                    Address newAddress = new Address(); //skapa ny instans av new address klassen
 
                     Console.Write("Gatuadress: ");
                     newAddress.StreetName = Console.ReadLine()!.Trim();
@@ -114,9 +129,9 @@ public class MenuService : IMenuService
                     newAddress.Country = Console.ReadLine()!.Trim();
 
 
-                    contact.Address = newAddress!;
+                    contact.Address = newAddress!; //assignar contact.adress till nya adress
 
-                    _contactService.UpdateContact(email, contact);
+                    _contactService.UpdateContact(email, contact);  // anrop till metoden som tillhör objekt av ContactService
 
                     Console.WriteLine("*Kontaktpersonen är nu uppdaterad*");
                     Console.ReadLine();
@@ -124,7 +139,7 @@ public class MenuService : IMenuService
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("~Ingen ändrig gjordes~");
+                    Console.WriteLine("~Ingen ändrig gjordes~"); // om svaret inte är ja skrivs detta ut
                     Console.ReadLine();
                 }
             }
@@ -132,7 +147,7 @@ public class MenuService : IMenuService
         catch { }
         Console.Clear();
         MainMenu();
-    }
+    } // hämtning via mail, uppdaterar eller redigning av en kontakt
 
     public void GetOneContact()
     {
@@ -145,8 +160,8 @@ public class MenuService : IMenuService
         try
         {
 
-            var contact = _contactService.GetContactPerson(email!);
-            if (contact != null)
+            var contact = _contactService.GetContactPerson(email!); // hämtning
+            if (contact != null) // om kontakten inte är null skrivs nedan ut
             {
 
                 Console.Clear();
@@ -158,11 +173,11 @@ public class MenuService : IMenuService
                 Console.WriteLine($"Adress: {contact?.Address?.FullAddress}");
 
                 Console.ReadKey();
-                MainMenu();
+                MainMenu(); // går tillbaka till menyn
             }
-            else
+            else // om kontatken inte finns skrivs nedan 
             {
-                Console.WriteLine("~Kontaktpersonen kunde inte hittas~");
+                Console.WriteLine("~Kontaktpersonen kunde inte hittas~"); 
             }
         }
 
@@ -171,7 +186,7 @@ public class MenuService : IMenuService
         Console.ReadKey();
         MainMenu();
 
-    }
+    } // hämtar en kontakt via mail
 
     public void ListContacts()
     {
@@ -180,35 +195,36 @@ public class MenuService : IMenuService
         Console.WriteLine("....................");
         Console.WriteLine();
 
-        var contactList = _contactService.GetAllContacts();
-        if (contactList.Count() > 0)
+        var contactList = _contactService.GetAllContacts(); // hämtar en lista med från obejktet _contactService
+        if (contactList.Count() > 0) // kontrollerar att listan inte är tom, om listan inte är tom listas listan 
         {
 
-            foreach (var contact in _contactService.GetAllContacts())
-                if (contact != null)
+            foreach (var contact in _contactService.GetAllContacts()) // hämtar alla kontakter i _contactService
+                if (contact != null) // om listan inte är null skrivs de befintliga kontanker ut
 
                 {
                     Console.WriteLine($"Namn: {contact.FirstName} {contact.LastName}");
                     Console.WriteLine($"E-post: {contact.Email}");
                     Console.WriteLine($"Telefonummer: {contact.PhoneNumber}");
                     Console.WriteLine($"Adress: {contact?.Address?.FullAddress}");
+                    Console.WriteLine();
 
                 }
 
         }
         else
         {
-            Console.WriteLine("~Det finns ingen kontakt i kontaktlistan~");// kommer inte upp
+            Console.WriteLine("~Det finns ingen kontakt i kontaktlistan~"); // om den inte finns några kontakter i listan
 
         }
 
         Console.ReadKey();
         MainMenu();
-    }
+    } // hämtar alla kontakter
 
     public void MainMenu()
     {
-        try
+        try 
         {
             Console.Clear();
             Console.WriteLine("KONTAKTLISTA");
@@ -224,9 +240,9 @@ public class MenuService : IMenuService
             Console.WriteLine("6. Avsluta");
             
             int option;
-            while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 6)
+            while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 6)// felhantering, ifall man skriver in en sträng i konsolen, och inte väljer en int från 1 till 6
             {
-                Console.Write("Något gick fel, välj ett nummer mellan 1-6: ");
+                Console.Write("Något gick fel, välj ett nummer mellan 1-6: "); 
                 
             }
 
@@ -259,7 +275,7 @@ public class MenuService : IMenuService
         catch
         { }
 
-    }
+    } // huvudmeyn och alternativ ( switch ) även ifall man ej väljer en int, så felhantering
 
     public void RemoveContact()
     {
@@ -274,9 +290,9 @@ public class MenuService : IMenuService
 
         try
         {
-            var contact = _contactService.GetContactPerson(email!);
+            var contact = _contactService.GetContactPerson(email!); // anropen metod getcontactperson via mail
 
-            if (contact != null)
+            if (contact != null) // om den inte är null skrivs nedan ur
             {
 
                 Console.WriteLine($"Namn: {contact.FirstName} {contact.LastName}");
@@ -284,13 +300,25 @@ public class MenuService : IMenuService
                 Console.WriteLine($"Telefonummer: {contact.PhoneNumber}");
                 Console.WriteLine($"Adress: {contact?.Address?.FullAddress}");
 
-                _contactService.DeleteContact(email!);
-
+                Console.WriteLine();
+                Console.WriteLine("Vill du radera denna Kontakt? (Ja/Nej):");
+                var response = Console.ReadLine();
                 Console.Clear();
-                Console.WriteLine("*Kontaktpersonen är nu raderad*");
 
+                if (response?.Trim().Equals("Ja", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    _contactService.DeleteContact(email!);
 
-                Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("*Kontaktpersonen är nu raderad*");
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("~Kontaktpersonen finns kvar i kontaktlistan~");
+                }
+
+            Console.ReadKey();
                 MainMenu();
             }
             else
@@ -301,6 +329,6 @@ public class MenuService : IMenuService
         catch { }
         Console.ReadKey();
         MainMenu();
-    }
+    } // tar bort kontakt via mail
 
 }
