@@ -1,10 +1,6 @@
 ﻿using C__ContactList.Interfaces;
 using C__ContactList.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace C__ContactList.Services;
 
@@ -19,6 +15,8 @@ public class MenuService : IMenuService
     public void CreateContact()
     {
         var contact = new ContactPerson();
+
+        
 
         // skapar en ny instans av ContactPerson
 
@@ -97,7 +95,7 @@ public class MenuService : IMenuService
                  StringComparison.OrdinalIgnoreCase är en inställning
                  som ignorerar bokstavsstorleken vid jämförelse.*/
 
-                if (response?.Trim().Equals("Ja", StringComparison.OrdinalIgnoreCase) == true) 
+                if (response?.Trim().Equals("Ja", StringComparison.OrdinalIgnoreCase) == true)
                 {
                     Console.Write("Nytt förnamn: ");
                     var newFirstName = Console.ReadLine();
@@ -115,8 +113,8 @@ public class MenuService : IMenuService
                     var newPhoneNumber = Console.ReadLine();
                     contact.PhoneNumber = newPhoneNumber!;
 
-                   
-                    
+
+
                     Address newAddress = new Address(); //skapa ny instans av new address klassen
 
                     Console.Write("Gatuadress: ");
@@ -139,13 +137,24 @@ public class MenuService : IMenuService
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("~Ingen ändrig gjordes~"); // om svaret inte är ja skrivs detta ut
+                    Console.WriteLine("~Ingen ändring gjordes~"); // om svaret inte är ja skrivs detta ut
                     Console.ReadLine();
                 }
+              
+            }
+            else
+            { 
+               
+                Console.Clear();
+                Console.WriteLine("~kontakten kunde inte hittas~"); // om kontakten inte hittas kommer detta skrivas ut
+                Console.ReadLine();
             }
         }
-        catch { }
+        catch {  }
         Console.Clear();
+        
+        
+       
         MainMenu();
     } // hämtning via mail, uppdaterar eller redigning av en kontakt
 
@@ -205,8 +214,8 @@ public class MenuService : IMenuService
                 {
                     Console.WriteLine($"Namn: {contact.FirstName} {contact.LastName}");
                     Console.WriteLine($"E-post: {contact.Email}");
-                    Console.WriteLine($"Telefonummer: {contact.PhoneNumber}");
-                    Console.WriteLine($"Adress: {contact?.Address?.FullAddress}");
+                    //Console.WriteLine($"Telefonummer: {contact.PhoneNumber}");
+                    //Console.WriteLine($"Adress: {contact?.Address?.FullAddress}");
                     Console.WriteLine();
 
                 }
@@ -305,7 +314,9 @@ public class MenuService : IMenuService
                 var response = Console.ReadLine();
                 Console.Clear();
 
-                if (response?.Trim().Equals("Ja", StringComparison.OrdinalIgnoreCase) == true)
+                if (response?.Trim().Equals("Ja", StringComparison.OrdinalIgnoreCase) == true) /* metod (stor- eller småbokstäver)StringComparison.OrdinalIgnoreCase är en inställning
+                 som ignorerar bokstavsstorleken vid jämförelse.*/
+                 
                 {
                     _contactService.DeleteContact(email!);
 

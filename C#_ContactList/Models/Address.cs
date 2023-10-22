@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace C__ContactList.Models;
 
 public class Address /*Klass: En klass är en mall
-                      * som definierar hur ett objekt ska skapas.
-                      * Det innehåller medlemsvariabler och metoder 
-                      * som beskriver objektets egenskaper och beteende.*/
+                       som definierar hur ett objekt ska skapas.
+                       Det innehåller medlemsvariabler och metoder 
+                       som beskriver objektets egenskaper och beteende.*/
 {
     public string? StreetName { get; set; }
     public string? ZipCode { get; set; }

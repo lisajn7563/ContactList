@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RhjhJwx9te/mrbzgBDFSad0tEp52/BMXXKaUDpWrLNMmVdK7l3gRK7zC/WAxGOiT6a8vyEb4PX9pw4gpUnfH6A==",
+  "dgSpecHash": "YOz4YZDaCHfnctcrZA3xSid/e44KBhs91p7wtbR2ZZWMMaGMr617WpXmZV4B9rbWvIBf9RahwqAyDonI6Lfvog==",
   "success": true,
-  "projectFilePath": "C:\\skola\\ContactList\\TestUnit\\ContactList.Tests.csproj",
+  "projectFilePath": "C:\\skola\\ContactList_uppgift\\TestUnit\\ContactList.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lisaj\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\lisaj\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",

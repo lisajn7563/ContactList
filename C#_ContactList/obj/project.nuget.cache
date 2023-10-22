@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V8M79Zb1V5A8Xmp+zhmmhIKXiFUDRmbQ0GwmHK+H9ZwGAiJpUS3uo7gOU+VERUe0JGVRZKLyU5r9U+AccDmEuQ==",
+  "dgSpecHash": "eZiWHeKsfsSi9keaK71WmKZTDkLiNhEz0h2WTW+bdKbG2mBkUa8SPOcyhE+ej8HB5lPPLes3X/BU1+EWkDCurQ==",
   "success": true,
-  "projectFilePath": "C:\\skola\\ContactList\\C#_ContactList\\C#_ContactList.csproj",
+  "projectFilePath": "C:\\skola\\ContactList_uppgift\\C#_ContactList\\C#_ContactList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lisaj\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

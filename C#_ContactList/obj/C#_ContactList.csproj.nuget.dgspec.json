@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\skola\\ContactList\\C#_ContactList\\C#_ContactList.csproj": {}
+    "C:\\skola\\ContactList_uppgift\\C#_ContactList\\C#_ContactList.csproj": {}
   },
   "projects": {
-    "C:\\skola\\ContactList\\C#_ContactList\\C#_ContactList.csproj": {
+    "C:\\skola\\ContactList_uppgift\\C#_ContactList\\C#_ContactList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\skola\\ContactList\\C#_ContactList\\C#_ContactList.csproj",
+        "projectUniqueName": "C:\\skola\\ContactList_uppgift\\C#_ContactList\\C#_ContactList.csproj",
         "projectName": "C#_ContactList",
-        "projectPath": "C:\\skola\\ContactList\\C#_ContactList\\C#_ContactList.csproj",
+        "projectPath": "C:\\skola\\ContactList_uppgift\\C#_ContactList\\C#_ContactList.csproj",
         "packagesPath": "C:\\Users\\lisaj\\.nuget\\packages\\",
-        "outputPath": "C:\\skola\\ContactList\\C#_ContactList\\obj\\",
+        "outputPath": "C:\\skola\\ContactList_uppgift\\C#_ContactList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
